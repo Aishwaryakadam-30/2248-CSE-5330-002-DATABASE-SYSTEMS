@@ -1,0 +1,10 @@
+mysql>INSERT INTO League (id, country_id, name) VALUES (1, 999, 'United States');
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`project_db`.`league`, CONSTRAINT `league_ibfk_1` FOREIGN KEY (`country_id`) REFERENCES `country` (`id`))
+
+mysql>INSERT INTO Country (id, name) VALUES (1, 'United States');
+ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'
+
+mysql>INSERT INTO Player (id, player_api_id, player_name, player_fifa_api_id, birthday, height, weight) VALUES (1, 1001, 'Virat Kohli', 101, '1990-01-01', 180, 75);
+ERROR 1062 (23000): Duplicate entry '1001' for key 'player_api_id'
+
+mysql> notee

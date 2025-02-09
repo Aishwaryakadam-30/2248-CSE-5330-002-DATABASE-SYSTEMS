@@ -1,0 +1,11 @@
+mysql> INSERT INTO Country (name) VALUES ('Germany');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> INSERT INTO League (country_id, name) VALUES (2, 'Bundesliga');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO Player (player_api_id, player_name, player_fifa_api_id, birthday, height, weight) 
+VALUES (2001, 'Manuel Neuer', 102001, '1986-03-27', 193, 92);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> notee

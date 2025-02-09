@@ -1,0 +1,11 @@
+mysql> DELETE FROM Country WHERE id = 1;
+ERROR 1451 (23000): Cannot delete or update a parent row: a foreign key constraint fails (`axk9035`.`league`, CONSTRAINT `league_ibfk_1` FOREIGN KEY (`country_id`) REFERENCES `country` (`id`))
+
+mysql> DELETE FROM League WHERE id = 1;
+ERROR 1451 (23000): Cannot delete or update a parent row: a foreign key constraint fails (`axk9035`.`match`, CONSTRAINT `match_ibfk_2` FOREIGN KEY (`league_id`) REFERENCES `league` (`id`))
+
+mysql> DELETE FROM Player WHERE player_api_id = 1001;
+ERROR 1451 (23000): Cannot delete or update a parent row: a foreign key constraint fails (`axk9035`.`player_attributes`, CONSTRAINT `player_attributes_ibfk_1` FOREIGN KEY (`player_api_id`) REFERENCES `player` (`player_api_id`))
+
+
+mysql> notee
